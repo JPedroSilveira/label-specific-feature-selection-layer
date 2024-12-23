@@ -33,18 +33,18 @@ both synthetic and real-world datasets supported by multiple evaluation methods
 and compared with state-of-the-art post-hoc techniques. It successfully identified
 the most relevant features for different labels.
 
-# How to execute
-## Define the feature weighting algorithms
+## How to execute
+### Define the feature weighting algorithms
 On `run_evaluation.py`, add on "selectors_types" list all methods that you want to compare.
 All available methods are already imported.
 Example: `selectors_types = [MFSLayerV1ReLUSelector, LassoSelectorWrapper, LIMESelectorWrapper, DeepSHAPSelectorWrapper]`
-## Setup the general execution config
+### Setup the general execution config
 On `config/general_config.py` is possible to set all framework options including the folder of the dataset that will be used for the evaluation.
-## Setup predictors
+### Setup predictors
 On `config/predictor_types_config.py` is possible to set the predictors that will be used to evaluate feature selection subsets. 
 Current options are: SVC and Neural Network.
-## Setup stability metrics
+### Setup stability metrics
 On `config/stability_metrics_config.py` you can define the stability metrics that will be used during the evaluation.
 Current options are: Jaccard, Spearman, Pearson and Kuncheva.
-## Execute the analysis
+### Execute the analysis
 With all dependencies (`requirements.txt`) prepared, execute: `python main.py`
